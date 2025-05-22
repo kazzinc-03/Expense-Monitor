@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expense Monitor</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1>Expense Monitor</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Purpose</th>
+        <th>Mode</th>
+      </tr>
+    </thead>
+    <tbody id="expenses-table-body"></tbody>
+  </table>
+
+  <script>
+    async function loadExpenses() {
+      try {
+        const res = await fetch('/api/expenses');
+        const expenses = await res.json();
+
+        const tbody = document.getElementById('expenses-table-body');
+        tbody.innerHTML = '';
+
+        expenses.forEach(({ date, amount, purpose, mode }) => {
+          const tr = document.createElement('tr');
+
+          tr.innerHTML = `
+            <td>${new Date(date).toLocaleDateString()}</td>
+            <td>${amount}</td>
+            <td>${purpose}</td>
+            <td>${mode}</td>
+          `;
+
+          tbody.appendChild(tr);
+        });
+      } catch (err) {
+        console.error('Failed to load expenses', err);
+      }
+    }
+
+    // Load expenses every 3 seconds to see updates in real-time
+    loadExpenses();
+    setInterval(loadExpenses, 3000);
+  </script>
+</body>
+</html>

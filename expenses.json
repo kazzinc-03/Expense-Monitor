@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2025-05-20",
+    "amount": 300,
+    "purpose": "food",
+    "mode": "cash"
+  },
+  {
+    "date": "2025-05-20",
+    "amount": 3500,
+    "purpose": "shoes",
+    "mode": "cash"
+  },
+  {
+    "date": "2025-05-20",
+    "amount": 2500,
+    "purpose": "groceries",
+    "mode": "card"
+  },
+  {
+    "date": "2025-05-20",
+    "amount": 390,
+    "purpose": "food",
+    "mode": "upi"
+  },
+  {
+    "date": "2025-05-18",
+    "amount": 1500,
+    "purpose": "maintenance fee",
+    "mode": "cash"
+  },
+  {
+    "date": "2025-05-17",
+    "amount": 4001,
+    "purpose": "shopping",
+    "mode": "card"
+  }
+]
