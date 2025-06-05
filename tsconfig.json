@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
-    "rootDir": "./",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "target": "ES2020",                        // Modern JS features (optional: can be ES6)
+    "module": "CommonJS",                      // Node.js-style modules
+    "rootDir": "./",                           // Root directory for source TypeScript files
+    "outDir": "./dist",                        // Output directory for compiled JS
+    "strict": true,                            // Enable strict type-checking
+    "esModuleInterop": true,                   // Allow `import` of CommonJS modules
+    "moduleResolution": "node",                // Look for modules in node_modules
+    "resolveJsonModule": true,                 // Allow importing .json files
+    "forceConsistentCasingInFileNames": true,  // Helps on case-sensitive filesystems
+    "skipLibCheck": true                       // Speeds up compilation by skipping type checks of libraries
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules", "dist"]

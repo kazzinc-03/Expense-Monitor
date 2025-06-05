@@ -34,5 +34,23 @@
     "amount": 4001,
     "purpose": "shopping",
     "mode": "card"
+  },
+  {
+    "date": "2025-05-20",
+    "amount": 2503,
+    "purpose": "shoes",
+    "mode": "card"
+  },
+  {
+    "date": "2025-06-01",
+    "amount": 500,
+    "purpose": "books",
+    "mode": "card"
+  },
+  {
+    "date": "2025-06-03",
+    "amount": 60,
+    "purpose": "momos",
+    "mode": "cash"
   }
 ]
